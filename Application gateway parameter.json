@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "applicationGatewayName": {
+        "value": "samplename1234"
+      },
+      "publicIPAddressName": {
+        "value": "PIP-name"
+      },
+      "applicationGatewaySku": {
+        "value": "WAF_Medium"
+      },
+      "applicationGatewayTier": {
+        "value": "WAF"
+      },
+      "instanceCount": {
+        "value": "2"
+      },
+      "SubnetId": {
+        "value": "/subscriptions/8ac76842-7288-4bf7-a48c-232e319e494a/resourceGroups/kalRgroup1/providers/Microsoft.Network/virtualNetworks/kalRgroup1/subnets/diiassAGW"
+      },
+      "backendIpAddress1": {
+        "value": "10.0.0.4"
+      },
+      "certData": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/SUBSCRIPTIONID/resourceGroups/RESOURCEGROUPNAME/providers/Microsoft.KeyVault/vaults/KEYVAULTNAME"
+          },
+          "secretName": "pwdOrssh"
+        }
+      },
+      "certPassword": {
+        "value": "2"
+      }
+    }
+  }
